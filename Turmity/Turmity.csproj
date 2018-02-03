@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Board.cs" />
+    <Compile Include="CustomDirectionList.cs" />
     <Compile Include="DirectionList.cs" />
     <Compile Include="Iboard.cs" />
     <Compile Include="IDirectionList.cs" />
