@@ -34,8 +34,12 @@ namespace Turmity
         public string Export()
         {
             string cellsAsString = "";
+            int counter = 0;
+            int width = Cells.GetLength(1);
             foreach (ushort cellValue in Cells)
             {
+                if (counter % width == 0 && counter != 0) cellsAsString += '\n';
+                counter++;
                 cellsAsString += cellValue.ToString();
             }
             return cellsAsString;
