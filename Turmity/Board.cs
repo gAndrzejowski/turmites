@@ -25,7 +25,7 @@ namespace Turmity
                 for (int row = 0; row < height; row++)
                 {
                     //Zaczynamy zawsze z pustą planszą
-                    Cells[column, row] = 0;
+                    Cells[row, column] = 0;
                 }
             }
         }
