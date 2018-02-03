@@ -24,7 +24,7 @@ namespace Turmity
         public int[] Left()
         {
             if (CurrentIndex > 0) CurrentIndex--;
-            else CurrentIndex = Vectors.GetLength(0);
+            else CurrentIndex = Vectors.GetLength(0)-1;
             return GetCurrentVector();
         }
 

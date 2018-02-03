@@ -45,11 +45,16 @@
     <Compile Include="Board.cs" />
     <Compile Include="CustomDirectionList.cs" />
     <Compile Include="DirectionList.cs" />
+    <Compile Include="HeadState.cs" />
     <Compile Include="Iboard.cs" />
     <Compile Include="IDirectionList.cs" />
+    <Compile Include="ITurmiteHead.cs" />
     <Compile Include="MooreDirections.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StateInstruction.cs" />
+    <Compile Include="TurmiteHead.cs" />
+    <Compile Include="TurmiteHeadLangtonAnt.cs" />
     <Compile Include="VonNeumannDirections.cs" />
   </ItemGroup>
   <ItemGroup>
