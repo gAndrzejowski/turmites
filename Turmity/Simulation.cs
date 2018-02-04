@@ -66,5 +66,15 @@ namespace Turmity
             while (Step()) ;
             Result = Grid.Export();
         }
+        //Jak wyżej ale z animacją dla ubogich, grozi apopleksją
+        public void RunWithPreview(int delay)
+        {
+            while (Step()){
+                System.Console.Clear();
+                System.Console.Write(Grid.Export());
+                System.Threading.Thread.Sleep(delay);
+            }
+            Result = Grid.Export();
+        }
     }
 }

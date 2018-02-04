@@ -22,7 +22,9 @@ namespace Turmity
             {
                 key = System.Console.ReadKey().KeyChar;
             } while (key != 't' && key != 'n');
+            System.Console.Clear();
             if (key == 't') System.Console.WriteLine(sim.Result);
+
             System.Console.WriteLine("Zapis do pliku? t/n");
             do
             {
@@ -30,11 +32,12 @@ namespace Turmity
             } while (key != 't' && key != 'n');
             if (key=='t')
             {
+                System.Console.Clear();
                 System.Console.Write("Podaj nazwę pliku");
                 string filename = System.Console.ReadLine();
                 string path = System.Environment.CurrentDirectory;
                 File.WriteAllText("output\\" + filename + ".txt", sim.Result);
-                System.Console.WriteLine("Zapisano: " + path + "\\output\\" + filename);
+                System.Console.WriteLine("Zapisano: " + path + "\\output\\" + filename + ".txt");
             }
             System.Console.ReadKey();
         }
