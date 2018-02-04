@@ -51,7 +51,7 @@ namespace Turmity
         {
             int color = Grid.GetCellValue((uint)X,(uint)Y);
             int[] move = Head.Step(color);
-            if (move[0] == -1) return false;
+            if (move[0] < 0) return false;
             Grid.SetCellValue((uint)X, (uint)Y, (ushort)move[0]);
             X += move[1];
             Y += move[2];

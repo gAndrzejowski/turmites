@@ -9,7 +9,7 @@ namespace Turmity
     interface IBoard
     {
         ushort GetCellValue(uint x, uint y);
-        bool SetCellValue(uint x, uint y, ushort val);
+        void SetCellValue(uint x, uint y, ushort val);
         string Export();
     }
 }
