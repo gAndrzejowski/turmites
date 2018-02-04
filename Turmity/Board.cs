@@ -11,15 +11,12 @@ namespace Turmity
     {
         // Tablica dwuwymiarowa zawierająca stan świata, tj. wartości wszystkich komórek
         protected ushort[,] Cells;
-        // Liczba "kolorów", czyli możliwych stanów każdej z komórek
-        protected ushort Colors;
-
+        
         // Konstruktor tworzy planszę o zadanych parametrach i wypełnia ją zerami
         // Domyślna liczba kolorów to najprostszy sensowny przypadek
-        public Board(ushort colors = 2,int width=300, int height=300)
+        public Board(int width=300, int height=300)
         {
             Cells = new ushort[height, width];
-            Colors = colors;
             for (int column = 0; column < width; column++)
             {
                 for (int row = 0; row < height; row++)
@@ -52,11 +49,9 @@ namespace Turmity
         }
 
         // Zmień wartość komórki o wskazanych współrzędnych
-        public bool SetCellValue(uint x, uint y, ushort val)
+        public void SetCellValue(uint x, uint y, ushort val)
         {
-            if (val >= Colors) return false;
             Cells[x, y] = val;
-            return true;
         }
         
     }
