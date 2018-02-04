@@ -52,6 +52,7 @@
     <Compile Include="MooreDirections.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Simulation.cs" />
     <Compile Include="StateInstruction.cs" />
     <Compile Include="TurmiteHead.cs" />
     <Compile Include="TurmiteHeadLangtonAnt.cs" />

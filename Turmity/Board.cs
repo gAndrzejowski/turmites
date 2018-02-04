@@ -16,7 +16,7 @@ namespace Turmity
 
         // Konstruktor tworzy planszę o zadanych parametrach i wypełnia ją zerami
         // Domyślna liczba kolorów to najprostszy sensowny przypadek
-        public Board(ushort colors = 2,uint width=300, uint height=300)
+        public Board(ushort colors = 2,int width=300, int height=300)
         {
             Cells = new ushort[height, width];
             Colors = colors;
