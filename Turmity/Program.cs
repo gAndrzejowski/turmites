@@ -33,12 +33,13 @@ namespace Turmity
             if (key=='t')
             {
                 System.Console.Clear();
-                System.Console.Write("Podaj nazwę pliku");
+                System.Console.Write("Podaj nazwę pliku: ");
                 string filename = System.Console.ReadLine();
                 string path = System.Environment.CurrentDirectory;
                 File.WriteAllText("output\\" + filename + ".txt", sim.Result);
                 System.Console.WriteLine("Zapisano: " + path + "\\output\\" + filename + ".txt");
             }
+            File.WriteAllText("output\\" + "vizu.js", sim.ResultJS);
             System.Console.ReadKey();
         }
     }

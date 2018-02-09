@@ -41,6 +41,16 @@ namespace Turmity
             }
             return cellsAsString;
         }
+        //Eksport do tablicy Javascript
+        public string ExportJS()
+        {
+            string cellsAsString = "let grid = [";
+            foreach (ushort cellValue in Cells)
+            {
+                cellsAsString +=(cellValue.ToString()+',');
+            }
+            return (cellsAsString + "null],gridWidth="+Cells.GetLength(1));
+        }
 
         // Pobierz wartość komórki o wskazanych współrzędnych;
         public ushort GetCellValue(uint x, uint y)

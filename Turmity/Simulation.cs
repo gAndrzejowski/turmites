@@ -28,6 +28,8 @@ namespace Turmity
         private int Height;
         //Wynik symulacji
         public string Result;
+        //JW ale do wizualizacji
+        public string ResultJS;
 
         public Simulation(TurmiteHead head,int maxIterations=100000,int width = 300, int height = 300)
         {
@@ -63,8 +65,9 @@ namespace Turmity
         //Działaj dopóki metoda Step zwraca true, po skończeniu wyeksportuj planszę jako string
         public void Run()
         {
-            while (Step()) ;
+            while (Step()) if (CurrentStep % 100000 == 0) System.Console.WriteLine("krok:"+CurrentStep);
             Result = Grid.Export();
+            ResultJS = Grid.ExportJS();
         }
         //Jak wyżej ale z animacją dla ubogich, grozi apopleksją
         public void RunWithPreview(int delay)
